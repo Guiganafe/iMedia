@@ -1,4 +1,4 @@
-package com.example.imedia;
+package com.example.imedia.Firebase;
 
 import androidx.annotation.NonNull;
 
