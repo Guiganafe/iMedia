@@ -24,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SignIn extends AppCompatActivity {
+public class CreateAccount extends AppCompatActivity {
 
     private TextInputLayout edt_email_cadastro, edt_senha_cadastro;
     private Button btn_cadastrar;
@@ -42,7 +42,7 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_create_account);
 
         /**
          * Conexão com os componentes de layout
@@ -92,13 +92,13 @@ public class SignIn extends AppCompatActivity {
 
         progressBar.setVisibility(View.VISIBLE);
 
-        firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(SignIn.this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //firebaseAuth.getCurrentUser().getUid() != null
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(SignIn.this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CreateAccount.this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show();
 
                     userID = FirebaseService.getFirebaseAuth().getCurrentUser().getUid();
                     DocumentReference documentReference = db.collection("users").document(userID);
@@ -111,12 +111,12 @@ public class SignIn extends AppCompatActivity {
                         }
                     });
 
-                    Intent CompletarPerfilIntent = new Intent(SignIn.this, MainActivity.class);
+                    Intent CompletarPerfilIntent = new Intent(CreateAccount.this, MainActivity.class);
                     startActivity(CompletarPerfilIntent);
                     finish();
                 }else{
                     progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(SignIn.this, "Falha no cadastro", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CreateAccount.this, "Falha no cadastro", Toast.LENGTH_LONG).show();
                 }
             }
         });
