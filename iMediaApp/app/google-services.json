@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "391296824131",
+    "firebase_url": "https://imedia-c5115.firebaseio.com",
+    "project_id": "imedia-c5115",
+    "storage_bucket": "imedia-c5115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391296824131:android:a0d7e0d1b66650c693f5f6",
+        "android_client_info": {
+          "package_name": "com.example.imedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391296824131-esuq57jehc9378qudjrbg9jmks6ffg4d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.imedia",
+            "certificate_hash": "8dcbff43056fa3e49545da5e413166b70d9c4d4a"
+          }
+        },
+        {
+          "client_id": "391296824131-dstrfi86m5hfom8jhcggi1e0ajhbd9se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1F5TlRCxOQCKpe9tzQTBXFHFkUr9DB4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391296824131-dstrfi86m5hfom8jhcggi1e0ajhbd9se.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

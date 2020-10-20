@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.imedia;
 
 import org.junit.Test;
 
