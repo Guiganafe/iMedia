@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.HomeFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_popular_movies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
+    <ProgressBar
+        android:id="@+id/progress_movies_load"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
 
 </FrameLayout>
